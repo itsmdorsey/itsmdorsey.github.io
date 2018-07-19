@@ -5,7 +5,7 @@
 <script>
 function clickCounter() {
     if(typeof(Storage) !== "undefined") {
-        if (localStorage.aclickcount) {
+        if (!localStorage.aclickcount) {
             localStorage.aclickcount = Number(localStorage.aclickcount)+1;
         } else {
    localStorage.aclickcount = 1;
@@ -16,23 +16,16 @@ function clickCounter() {
 }
 
 function refresh() {
- document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.aclickcount + " time(s).";
-    
-    
+ document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.aclickcount + " time(s)."    
 }
+    
 </script>
 </head>
 <body>
-
 <p><button onclick="refresh()" type="button">refresh</button></p>
 <div id="result"></div>
-
 <p><button onclick="clickCounter()" type="button">Click me!</button></p>
 <div id="result"></div>
 <p>Click the button to see the counter increase.</p>
-
-
-
-
 </body>
 </html>
