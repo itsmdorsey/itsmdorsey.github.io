@@ -1,22 +1,23 @@
 
+
 <!DOCTYPE html>
 <html>
 <head>
 <script>
 function clickCounter() {
     if(typeof(Storage) !== "undefined") {
-        if (localStorage.clickcount) {
+        if (localStorage.aclickcount) {
             localStorage.clickcount = Number(localStorage.clickcount)+1;
         } else {
-   localStorage.clickcount = 1;
+   localStorage.aclickcount = 1;
         }
-        document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+        document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.aclickcount + " time(s).";
     } 
     
 }
 
 function refresh() {
- document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+ document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.aclickcount + " time(s).";
     
     
 }
@@ -30,7 +31,9 @@ function refresh() {
 <p><button onclick="clickCounter()" type="button">Click me!</button></p>
 <div id="result"></div>
 <p>Click the button to see the counter increase.</p>
+
+
+
+
 </body>
 </html>
-
-
