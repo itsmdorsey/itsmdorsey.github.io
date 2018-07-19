@@ -5,7 +5,7 @@
 <script>
 function clickCounter() {
     if(typeof(Storage) !== "undefined") {
-        if (!localStorage.aclickcount) {
+        if (localStorage.aclickcount) {
             localStorage.aclickcount = Number(localStorage.aclickcount)+1;
         } else {
    localStorage.aclickcount = 1;
