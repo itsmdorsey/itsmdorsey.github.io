@@ -1,14 +1,36 @@
 
-<h1>Title page</h1>
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function clickCounter() {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.clickcount) {
+            localStorage.clickcount = Number(localStorage.clickcount)+1;
+        } else {
+   localStorage.clickcount = 1;
+        }
+        document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+    } 
+    
+}
 
-<h2>Ch1</h2>
+function refresh() {
+ document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+    
+    
+}
+</script>
+</head>
+<body>
 
-<p><strong>this is bold</strong></p>
+<p><button onclick="refresh()" type="button">refresh</button></p>
+<div id="result"></div>
 
-<p><strong>New list</strong></p>
+<p><button onclick="clickCounter()" type="button">Click me!</button></p>
+<div id="result"></div>
+<p>Click the button to see the counter increase.</p>
+</body>
+</html>
 
-<ul>
-<li>1</li>
-<li>2</li>
-<li>3</li>
-</ul>
+
