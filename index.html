@@ -1,7 +1,22 @@
-
 <!DOCTYPE html>
 <html>
 <head>
+<style>
+.button {
+    background-color: #161E93; /* Green */
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button5 {border-radius: 40%;}
+</style>
 <script>
 function clickCounter() {
     if(typeof(Storage) !== "undefined") {
@@ -14,17 +29,30 @@ function clickCounter() {
     } 
     
 }
-
 function refresh() {
      localStorage.aclickcount = 0;
+ document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.aclickcount + " time(s)."    
+}
+
+function increase() {
+     localStorage.aclickcount = Number(localStorage.aclickcount)+1;
+ document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.aclickcount + " time(s)."    
+}
+
+function decrease() {
+     localStorage.aclickcount = Number(localStorage.aclickcount)-1;
  document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.aclickcount + " time(s)."    
 }
     
 </script>
 </head>
 <body>
-<p>Click the button to see the counter increase.</p>
-<p><button onclick="clickCounter()" type="button">Click me!</button></p>
+
+		<p>
+		 <button class="button button5" onclick="decrease()">-</button>
+		<text>Increase or decrease points</text>
+		 <button class="button button5" onclick="increase()">+</button></p>
+
 <div id="result"></div>
 <p><button onclick="refresh()" type="button">Reset to Zero</button></p>
 <div id="result"></div>
