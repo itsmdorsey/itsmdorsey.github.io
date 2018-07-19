@@ -29,32 +29,31 @@ function clickCounter() {
     } 
     
 }
-function refresh() {
+function reset() {
      localStorage.aclickcount = 0;
  document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.aclickcount + " time(s)."    
 }
 
 function increase() {
      localStorage.aclickcount = Number(localStorage.aclickcount)+1;
- document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.aclickcount + " time(s)."    
+ document.getElementById("result").innerHTML = "Total Point Value " + localStorage.aclickcount  
 }
 
 function decrease() {
      localStorage.aclickcount = Number(localStorage.aclickcount)-1;
- document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.aclickcount + " time(s)."    
+ document.getElementById("result").innerHTML = "Total Point Value " + localStorage.aclickcount
 }
     
 </script>
 </head>
 <body>
-
 		<p>
 		 <button class="button button5" onclick="decrease()">-</button>
 		<text>Increase or decrease points</text>
 		 <button class="button button5" onclick="increase()">+</button></p>
 
 <div id="result"></div>
-<p><button onclick="refresh()" type="button">Reset to Zero</button></p>
+<p><button onclick="reset()" type="button">Reset to Zero</button></p>
 <div id="result"></div>
 
 </body>
