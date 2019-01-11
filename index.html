@@ -38,7 +38,7 @@ function clickCounter() {
         } else {
   
         }
-        document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.aclickcount + " time(s)." "on day" localstorage.lastDate + ;
+        document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.aclickcount + " time(s)." + "on day" + localstorage.lastDate ;
     } 
     
 }
@@ -49,12 +49,12 @@ function reset() {
 
 function increase() {
      localStorage.aclickcount = Number(localStorage.aclickcount)+1;
- document.getElementById("result").innerHTML = "Total Point Value " + localStorage.aclickcount  
+ document.getElementById("result").innerHTML = "Total Point Value " + localStorage.aclickcount  ;
 }
 
 function decrease() {
      localStorage.aclickcount = Number(localStorage.aclickcount)-1;
- document.getElementById("result").innerHTML = "Total Point Value " + localStorage.aclickcount
+ document.getElementById("result").innerHTML = "Total Point Value " + localStorage.aclickcount;
 }
     
 </script>
