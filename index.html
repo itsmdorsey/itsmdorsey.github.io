@@ -26,6 +26,10 @@ if(localStorage.aclickcount=="undefined"){
 if(localStorage.aclickcount.isNaN()){
 	localStorage.aclickcount = 0
 }
+var d = new Date();
+document.getElementById("demo").innerHTML = d.getDate();
+	
+localstorage.lastDate = d
 	
 function clickCounter() {
     if(typeof(Storage) !== "undefined") {
@@ -34,7 +38,7 @@ function clickCounter() {
         } else {
   
         }
-        document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.aclickcount + " time(s).";
+        document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.aclickcount + " time(s)." "on day" localstorage.lastDate + ;
     } 
     
 }
