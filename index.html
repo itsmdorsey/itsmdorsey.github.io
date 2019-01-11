@@ -19,6 +19,10 @@
 .button5 {border-radius: 40%;}
 </style>
 <script>
+if(localStorage.aclickcount=="undefined"){
+	localStorage.aclickcount = 0
+}
+	
 function clickCounter() {
     if(typeof(Storage) !== "undefined") {
         if (localStorage.aclickcount) {
