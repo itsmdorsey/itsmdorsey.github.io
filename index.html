@@ -23,6 +23,10 @@ if(localStorage.aclickcount=="undefined"){
 	localStorage.aclickcount = 0
 }
 	
+if(localStorage.aclickcount.isNaN()){
+	localStorage.aclickcount = 0
+}
+	
 function clickCounter() {
     if(typeof(Storage) !== "undefined") {
         if (localStorage.aclickcount) {
