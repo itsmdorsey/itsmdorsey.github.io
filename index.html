@@ -20,16 +20,16 @@
 </style>
 <script>
 if(localStorage.aclickcount=="undefined"){
-	localStorage.aclickcount = 0
+	localStorage.aclickcount = 0;
 }
 	
 if(localStorage.aclickcount.isNaN()){
-	localStorage.aclickcount = 0
+	localStorage.aclickcount = 0;
 }
 var d = new Date();
 document.getElementById("demo").innerHTML = d.getDate();
 	
-localstorage.lastDate = d
+localstorage.lastDate = d;
 	
 function clickCounter() {
     if(typeof(Storage) !== "undefined") {
