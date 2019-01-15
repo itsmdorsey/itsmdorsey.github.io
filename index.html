@@ -1,93 +1,34 @@
 <!DOCTYPE html>
 <html>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<head>
-<style>
-.button {
-    background-color: #161E93; /* Green */
-    border: none;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 18px;
-    margin: 4px 2px;
-    cursor: pointer;
-}
+<body>
 
-.button5 {border-radius: 40%;}
-</style>
-	
+
+
+<img  id="Ding" src="http://www.clker.com/cliparts/A/J/p/A/d/3/red-box-md.png" onclick="myFunction()" border="full"/>
+<p id="demo"></p>
+<p id="demo2" onclick="myFunction2()" border="full">Click me2</p>
+<p onclick="check()" border="full">check if match</p>
+<p id="match"></p>
+
 <script>
-if(localStorage.aclickcount=="undefined"){
-	localStorage.aclickcount = 0;
-}
-	
-if(localStorage.aclickcount.isNaN()){
-	localStorage.aclickcount = 0;
-}
-var d = new Date();
-document.getElementById("demo").innerHTML = d.getDate();
-	
-localstorage.lastDate = d;
-	
-function clickCounter() {
-    if(typeof(Storage) !== "undefined") {
-        if (localStorage.aclickcount) {
-            localStorage.aclickcount = Number(localStorage.aclickcount)+1;
-        } else {
-  
-        }
-        document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.aclickcount + " time(s)." + "on day" + localstorage.lastDate ;
-    } 
-    
-}
-function reset() {
-     localStorage.aclickcount = 0;
- document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.aclickcount + " time(s)."    
-}
-
-function increase() {
-     localStorage.aclickcount = Number(localStorage.aclickcount)+1;
- document.getElementById("result").innerHTML = "Total Point Value " + localStorage.aclickcount  ;
-}
-
-function decrease() {
-     localStorage.aclickcount = Number(localStorage.aclickcount)-1;
- document.getElementById("result").innerHTML = "Total Point Value " + localStorage.aclickcount;
-}
-	
-	function myFunction() {
-  document.getElementById("demo").innerHTML = "Hello World";
+function myFunction(img) 
+{
+document.getElementById("demo").innerHTML = "Hello World Cat";
+document.getElementById("Ding").src = "https://ichef.bbci.co.uk/news/624/cpsprodpb/5D01/production/_95790832_gettyimages-516700094.jpg";
 }
 function myFunction2() {
   document.getElementById("demo2").innerHTML = "Hello World2";
-}
-function check() {
   if (document.getElementById("demo").innerHTML === document.getElementById("demo2").innerHTML) {
     document.getElementById("match").innertxt = "Its a Match!";
   } else {
   document.getElementById("match").innerHTML = "Not a Match!";
 }
 }
-    
+function check() {
+}
 </script>
-</head>
-<body>
-		<p>
-		 <button class="button button5" onclick="decrease()">-</button>
-		<text>Increase or decrease points</text>
-		 <button class="button button5" onclick="increase()">+</button></p>
 
-<div id="result"></div>
-<p><button onclick="reset()" type="button">Reset to Zero</button></p>
-<div id="result"></div>
-	
-	<p id="demo" onclick="myFunction()" border="full">Click me</p>
-<p id="demo2" onclick="myFunction2()" border="full">Click me2</p>
-<p onclick="check()" border="full">check if match</p>
-<p id="match"></p>
+
 
 </body>
 </html>
