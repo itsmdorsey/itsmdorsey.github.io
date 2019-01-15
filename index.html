@@ -18,6 +18,7 @@
 
 .button5 {border-radius: 40%;}
 </style>
+	
 <script>
 if(localStorage.aclickcount=="undefined"){
 	localStorage.aclickcount = 0;
@@ -56,6 +57,20 @@ function decrease() {
      localStorage.aclickcount = Number(localStorage.aclickcount)-1;
  document.getElementById("result").innerHTML = "Total Point Value " + localStorage.aclickcount;
 }
+	
+	function myFunction() {
+  document.getElementById("demo").innerHTML = "Hello World";
+}
+function myFunction2() {
+  document.getElementById("demo2").innerHTML = "Hello World2";
+}
+function check() {
+  if (document.getElementById("demo").innerHTML === document.getElementById("demo2").innerHTML) {
+    document.getElementById("match").innertxt = "Its a Match!";
+  } else {
+  document.getElementById("match").innerHTML = "Not a Match!";
+}
+}
     
 </script>
 </head>
@@ -68,6 +83,11 @@ function decrease() {
 <div id="result"></div>
 <p><button onclick="reset()" type="button">Reset to Zero</button></p>
 <div id="result"></div>
+	
+	<p id="demo" onclick="myFunction()" border="full">Click me</p>
+<p id="demo2" onclick="myFunction2()" border="full">Click me2</p>
+<p onclick="check()" border="full">check if match</p>
+<p id="match"></p>
 
 </body>
 </html>
