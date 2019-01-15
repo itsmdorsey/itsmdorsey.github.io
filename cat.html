@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+
+<img  id="Ding" src="http://www.clker.com/cliparts/A/J/p/A/d/3/red-box-md.png" onclick="myFunction()" border="full"/>
+<p id="demo"></p>
+<p id="demo2" onclick="myFunction2()" border="full">Click me2</p>
+<p onclick="check()" border="full">check if match</p>
+<p id="match"></p>
+
+<script>
+function myFunction(img) 
+{
+
+document.getElementById("demo").innerHTML = "Hello World Cat";
+document.getElementById("Ding").src = "https://ichef.bbci.co.uk/news/624/cpsprodpb/5D01/production/_95790832_gettyimages-516700094.jpg";
+
+}
+
+function myFunction2() {
+  document.getElementById("demo2").innerHTML = "Hello World2";
+  if (document.getElementById("demo").innerHTML === document.getElementById("demo2").innerHTML) {
+    document.getElementById("match").innertxt = "Its a Match!";
+  } else {
+  document.getElementById("match").innerHTML = "Not a Match!";
+}
+}
+function check() {
+
+}
+</script>
+
+
+
+</body>
+</html>
